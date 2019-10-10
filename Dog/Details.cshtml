@@ -1,0 +1,37 @@
+﻿@page
+@model Dogs1.Pages.Dog.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dogs</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dogs.DSL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dogs.DSL)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dogs.DSN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dogs.DSN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dogs.Petss)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dogs.Petss.PSID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Dogs.DID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

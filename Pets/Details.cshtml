@@ -1,0 +1,31 @@
+﻿@page
+@model Dogs1.Pages.Pets.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Petstores</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Petstores.PSLocation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Petstores.PSLocation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Petstores.PSName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Petstores.PSName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Petstores.PSID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
